@@ -10,6 +10,8 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
+        with:
+          ref: main
       
       - name: Create a new file
         run: date > hoge.txt
