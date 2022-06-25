@@ -24,3 +24,6 @@ jobs:
             - このプルリクエストはGitHub Actionsによって自動的に作成されます
           label: automated
           branch: hogehoge
+          branch-suffix: short-commit-hash
+          assignees: YUUKIToriyama
+          base: master
