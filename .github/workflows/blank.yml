@@ -1,0 +1,26 @@
+name: Create PR
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  createPR:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: Create a new file
+        run: date > hoge.txt
+    
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v4.0.4
+        with:
+          title: PRタイトル
+          commit-message: コミットメッセージ
+          body: |
+            - 自動プルリクエスト
+            - このプルリクエストはGitHub Actionsによって自動的に作成されます
+          label: automated
+          branch: hogehoge
